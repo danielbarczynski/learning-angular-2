@@ -4,6 +4,7 @@ interface Cat {
   name: string;
   age: number;
   color: string;
+  isMy: boolean;
 }
 
 @Component({
@@ -14,9 +15,9 @@ interface Cat {
 
 export class AppComponent {
   cats: Cat[] = [
-    { name: 'Tom', age: 3, color: 'white' },
-    { name: 'Jerry', age: 2, color: 'brown' },
-    { name: 'Mickey', age: 1, color: 'black' },
+    { name: 'Tom', age: 3, color: 'white', isMy: true },
+    { name: 'Jerry', age: 2, color: 'brown', isMy: false },
+    { name: 'Mickey', age: 1, color: 'black', isMy: true },
   ];
 
   title = 'learning-angular-2';
