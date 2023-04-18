@@ -1,8 +1,31 @@
 <h1>Hello world!</h1>
 <h4 [style]="style">{{ title }}</h4>
-<img [src]="imgSrc" alt=""> 
+<img [src]="imgSrc" alt="">
 <br>
 <input type="text" [(ngModel)]="car">
 <div #cat>Tino</div>
-<h4>{{ car }}</h4> 
+<h4>{{ car }}</h4>
 <button (click)="log(cat.textContent)">clear</button>
+<div *ngIf="car === 'BMW'">
+    You picked the BMW car
+</div>
+<div *ngIf="car">
+    You picked the {{ car }} car
+</div>
+
+<ng-container *ngIf="car; then dog else cow"></ng-container>
+<ng-template #dog>
+    <h4>dog</h4>
+</ng-template>
+<ng-template #cow>
+    <h4>cow</h4>
+</ng-template>
+
+<table>
+    <tr *ngFor="let cat of cats; let i = index;">
+        <td>{{ i + 1}}</td>
+        <td>{{ cat.name }}</td>
+        <td> {{ cat.age }} </td>
+        <td> {{ cat.color }} </td>
+    </tr>
+</table>
