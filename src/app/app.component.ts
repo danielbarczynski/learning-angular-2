@@ -19,7 +19,8 @@ export class AppComponent {
     { name: 'Jerry', age: 2, color: 'brown', isMy: false },
     { name: 'Mickey', age: 1, color: 'black', isMy: true },
   ];
-
+  fontsize: number = 25;
+  color: string = 'pink';
   title = 'learning-angular-2';
   style: string = 'color: red; font-size: 20px;'
   imgSrc: string = 'https://angular.io/assets/images/logos/angular/angular.png';

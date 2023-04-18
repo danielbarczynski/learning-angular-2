@@ -24,8 +24,8 @@
 <table>
     <tr *ngFor="let cat of cats; let i = index;">
         <td> {{ i + 1}}</td>
-        <td [class.my-cat]="cat.isMy"> {{ cat.name }}</td>
-        <td [ngClass]="{'my-cat' : cat.name}"> {{ cat.age }} </td>
-        <td> {{ cat.color }} </td>
+        <td [ngStyle]="{'fontSize': fontsize + 'px', 'color': color}"> {{ cat.name }}</td>
+        <td [ngClass]="{'my-cat': cat.isMy}"> {{ cat.age }} </td>
+        <td [ngStyle]="{'backgroundColor': (cat.isMy ? 'blue' : 'red')}"> {{ cat.color }} </td>
     </tr>
 </table>
