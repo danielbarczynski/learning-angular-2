@@ -1,4 +1,4 @@
-<h1>Hello world!</h1>
+<!-- <h1>Hello world!</h1>
 <h4 [style]="style">{{ title }}</h4>
 <img [src]="imgSrc" alt="">
 <br>
@@ -19,13 +19,13 @@
 </ng-template>
 <ng-template #cow>
     <h4>cow</h4>
-</ng-template>
-
+</ng-template> -->
+<app-pokemon-list></app-pokemon-list>
 <table>
-    <tr *ngFor="let cat of cats; let i = index;">
+    <tr *ngFor="let pokemon of pokemons; let i = index;">
         <td> {{ i + 1}}</td>
-        <td [ngStyle]="{'fontSize': fontsize + 'px', 'color': color}"> {{ cat.name }}</td>
-        <td [ngClass]="{'my-cat': cat.isMy}"> {{ cat.age }} </td>
-        <td [ngStyle]="{'backgroundColor': (cat.isMy ? 'blue' : 'red')}"> {{ cat.color }} </td>
+        <td> {{ pokemon.name }}</td>
+        <td> {{ pokemon.age }} </td>
+        <td> {{ pokemon.color }} </td>
     </tr>
 </table>
