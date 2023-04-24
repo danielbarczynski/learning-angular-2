@@ -1,1 +1,5 @@
-<app-pokemon-detail *ngFor="let pokemon of pokemons" [detail]="pokemon"></app-pokemon-detail>
+<app-pokemon-detail 
+*ngFor="let pokemon of pokemons" 
+[pokemon]="pokemon"
+(remove)="onRemoveHandler(pokemon)">
+</app-pokemon-detail>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon';
 
 @Component({
@@ -7,5 +7,13 @@ import { Pokemon } from 'src/app/models/pokemon';
   styleUrls: ['./pokemon-detail.component.css']
 })
 export class PokemonDetailComponent {
-  @Input() detail!: Pokemon;
+  @Input() 
+  pokemon!: Pokemon;
+  
+  @Output() 
+  remove: EventEmitter<Pokemon> = new EventEmitter();
+
+  onRemove(pokemon: Pokemon) {
+    this.remove.emit(pokemon);
+  }
 }

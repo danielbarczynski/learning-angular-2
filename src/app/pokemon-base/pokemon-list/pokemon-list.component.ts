@@ -8,8 +8,12 @@ import { Pokemon } from 'src/app/models/pokemon';
 })
 export class PokemonListComponent{
   pokemons: Pokemon[] = [
-    { name: 'Levi', age: 3, color: 'white'},
-    { name: 'Nano', age: 5, color: 'brown',},
-    { name: 'Zirus', age: 4, color: 'black'},
+    { id: 1, name: 'Levi', age: 3, color: 'white'},
+    { id: 2, name: 'Nano', age: 5, color: 'brown',},
+    { id: 3, name: 'Zirus', age: 4, color: 'black'},
   ];
+
+  onRemoveHandler(pokemon: Pokemon) {
+    return this.pokemons = this.pokemons.filter(x => x.id !== pokemon.id);
+  }
 }
