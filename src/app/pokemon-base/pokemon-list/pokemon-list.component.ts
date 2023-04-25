@@ -10,10 +10,13 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 export class PokemonListComponent implements OnInit {
   pokemons!: Pokemon[];
   constructor(private pokemonService: PokemonService) {
-    
+
   }
+
   ngOnInit(): void {
-    this.pokemons = this.pokemonService.getPokemons();
+    this.pokemonService.getPokemons().subscribe((pokemons: Pokemon[]) =>
+      this.pokemons = pokemons
+    )
   }
 
   onRemoveHandler(pokemon: Pokemon) {

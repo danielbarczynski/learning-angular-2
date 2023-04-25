@@ -1,0 +1,22 @@
+{
+    "pokemons": [
+        {
+            "id": 1,
+            "name": "Levi",
+            "age": 3,
+            "color": "white"
+        },
+        {
+            "id": 2,
+            "name": "Nano",
+            "age": 5,
+            "color": "brown"
+        },
+        {
+            "id": 3,
+            "name": "Zirus",
+            "age": 4,
+            "color": "black"
+        }
+    ]
+}
