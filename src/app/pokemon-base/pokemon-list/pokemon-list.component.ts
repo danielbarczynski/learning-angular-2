@@ -9,17 +9,15 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 })
 export class PokemonListComponent implements OnInit {
   pokemons!: Pokemon[];
-  constructor(private pokemonService: PokemonService) {
-
-  }
+  constructor(private pokemonService: PokemonService) {};
 
   ngOnInit(): void {
     this.pokemonService.getPokemons().subscribe((pokemons: Pokemon[]) =>
       this.pokemons = pokemons
-    )
-  }
+    );
+  };
 
   onRemoveHandler(pokemon: Pokemon) {
     return this.pokemons = this.pokemons.filter(x => x.id !== pokemon.id);
   }
-}
+};

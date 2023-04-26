@@ -8,12 +8,13 @@ const POKEMON_API = 'http://localhost:3000/pokemons/';
   providedIn: 'root'
 })
 export class PokemonService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { };
 
   getPokeomn(id: number): Observable<Pokemon> {
     return this.http.get<Pokemon>(POKEMON_API + id)
-  }
+  };
+
   getPokemons(): Observable<Pokemon[]> {
     return this.http.get<Pokemon[]>(POKEMON_API);
-  }
+  };
 }

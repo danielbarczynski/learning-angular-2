@@ -1,8 +1,10 @@
 <form #form>
   <label [for]="pokemon.name">Pokemon name: </label>
   <input type="text" [(ngModel)]="pokemon.name" name="name">
-  <br>
+  <br> <br>
+  <div>Is Strong?</div>
   <label>
+    True
     <input type="radio"
     name="isStrong"
     [value]="true"
@@ -12,6 +14,7 @@
   </label>
   <br>
   <label>
+    False
     <input type="radio"
     name="isStrong"
     [value]="false"
@@ -21,6 +24,8 @@
   </label>
 </form>
 
+<br>
 <div>
+  Your pokemon:
   {{ pokemon | json }}
 </div>

@@ -1,4 +1,7 @@
 body {
-    background-color: #000;
-    color: #fff;
+    background-image: url('D:/source/repos/learning-angular-2/src/assets/background.jpg');
+    margin-left: 30%;
+    margin-top: 5%;
+    font-size: large;
+    color: white;
 }
