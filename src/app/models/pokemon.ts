@@ -3,4 +3,5 @@ export interface Pokemon {
     name: string;
     age: number;
     color: string;
+    isStrong: boolean;
 }

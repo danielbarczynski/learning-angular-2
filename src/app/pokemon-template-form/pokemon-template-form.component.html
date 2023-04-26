@@ -1,6 +1,24 @@
 <form #form>
   <label [for]="pokemon.name">Pokemon name: </label>
   <input type="text" [(ngModel)]="pokemon.name" name="name">
+  <br>
+  <label>
+    <input type="radio"
+    name="isStrong"
+    [value]="true"
+    [ngModel]="pokemon.isStrong"
+    (ngModelChange)="toggleIsStrong($event)"
+    >
+  </label>
+  <br>
+  <label>
+    <input type="radio"
+    name="isStrong"
+    [value]="false"
+    [ngModel]="pokemon.isStrong"
+    (ngModelChange)="toggleIsStrong($event)"
+    >
+  </label>
 </form>
 
 <div>

@@ -4,19 +4,22 @@
             "id": 1,
             "name": "Levi",
             "age": 3,
-            "color": "white"
+            "color": "white",
+            "isStrong": false
         },
         {
             "id": 2,
-            "name": "Nano",
+            "name": "Zirus",
             "age": 5,
-            "color": "brown"
+            "color": "black",
+            "isStrong": true
         },
         {
             "id": 3,
-            "name": "Zirus",
+            "name": "Yenny",
             "age": 4,
-            "color": "black"
+            "color": "brown",
+            "isStrong": true
         }
     ]
 }
