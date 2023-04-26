@@ -1,6 +1,6 @@
 <form #form>
   <label [for]="pokemon.name">Pokemon name: </label>
-  <input type="text" [(ngModel)]="pokemon.name" name="name">
+  <input #pokemonName="ngModel" type="text" [(ngModel)]="pokemon.name" name="name">
   <br> <br>
   <div>Is Strong?</div>
   <label>
@@ -10,6 +10,7 @@
     [value]="true"
     [ngModel]="pokemon.isStrong"
     (ngModelChange)="toggleIsStrong($event)"
+    #pokemonStrong="ngModel"
     >
   </label>
   <br>
@@ -20,6 +21,7 @@
     [value]="false"
     [ngModel]="pokemon.isStrong"
     (ngModelChange)="toggleIsStrong($event)"
+    #pokemonStrong="ngModel"
     >
   </label>
 </form>
@@ -28,4 +30,11 @@
 <div>
   Your pokemon:
   {{ pokemon | json }}
+</div>
+
+<br>
+<div>
+  Errors:
+  <p *ngIf="!pokemonName.touched">Fill out the form!</p>
+  <p *ngIf="pokemonStrong.touched">touched!</p>
 </div>
