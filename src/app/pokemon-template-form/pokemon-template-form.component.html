@@ -1,28 +1,27 @@
 <form #form>
-  <label [for]="pokemon.name">Pokemon name: </label>
+  <label>Pokemon name:</label>
   <input #pokemonName="ngModel" type="text" [(ngModel)]="pokemon.name" name="name">
   <br> <br>
   <div>Is Strong?</div>
   <label>
     True
-    <input type="radio"
-    name="isStrong"
-    [value]="true"
-    [ngModel]="pokemon.isStrong"
-    (ngModelChange)="toggleIsStrong($event)"
-    #pokemonStrong="ngModel"
-    >
+    <input type="radio" name="isStrong" [value]="true" [ngModel]="pokemon.isStrong"
+      (ngModelChange)="toggleIsStrong($event)" #pokemonStrong="ngModel">
   </label>
   <br>
   <label>
     False
-    <input type="radio"
-    name="isStrong"
-    [value]="false"
-    [ngModel]="pokemon.isStrong"
-    (ngModelChange)="toggleIsStrong($event)"
-    #pokemonStrong="ngModel"
-    >
+    <input type="radio" name="isStrong" [value]="false" [ngModel]="pokemon.isStrong"
+      (ngModelChange)="toggleIsStrong($event)" #pokemonStrong="ngModel">
+  </label>
+  <br><br>
+  <label>
+    Pokemon type:
+    <select name="pokemonType" [(ngModel)]="pokemon.type">
+      <option *ngFor="let pokemonType of pokemonTypes" [value]="pokemonType.value">
+        {{ pokemonType.value }}
+      </option>
+    </select>
   </label>
 </form>
 

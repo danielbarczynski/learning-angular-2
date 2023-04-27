@@ -5,6 +5,7 @@
             "name": "Levi",
             "age": 3,
             "color": "white",
+            "type": { "key": 1, "value": "electric" },
             "isStrong": false
         },
         {
@@ -12,6 +13,7 @@
             "name": "Zirus",
             "age": 5,
             "color": "black",
+            "type": { "key": 0, "value": "fire" },
             "isStrong": true
         },
         {
@@ -19,7 +21,22 @@
             "name": "Yenny",
             "age": 4,
             "color": "brown",
+            "type": { "key": 2, "value": "air" },
             "isStrong": true
+        }
+    ],
+    "pokemonTypes": [
+        {
+            "key": 0,
+            "value": "fire"
+        },
+        {
+            "key": 1,
+            "value": "electric"
+        },
+        {
+            "key": 2,
+            "value": "air"
         }
     ]
 }

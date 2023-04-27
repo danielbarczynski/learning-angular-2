@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Pokemon } from '../models/pokemon';
+import { Pokemon, PokemonType } from '../models/pokemon';
 import { PokemonService } from '../services/pokemon.service';
 
 @Component({
@@ -9,7 +9,8 @@ import { PokemonService } from '../services/pokemon.service';
 })
 export class PokemonTemplateFormComponent implements OnInit {
   pokemon!: Pokemon;
-  
+  pokemonTypes!: PokemonType[];
+
   constructor(private pokemonService: PokemonService) { }
 
   toggleIsStrong(object: any): void{
@@ -17,8 +18,7 @@ export class PokemonTemplateFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.pokemonService.getPokeomn(1).subscribe((pokemon: Pokemon) =>
-    this.pokemon = pokemon)
+    this.pokemonService.getPokemon(1).subscribe((pokemon: Pokemon) => this.pokemon = pokemon);
+    this.pokemonService.getPokemonTypes().subscribe((pokemonTypes: PokemonType[]) => this.pokemonTypes = pokemonTypes);
   }
-
 }

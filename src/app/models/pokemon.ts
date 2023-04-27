@@ -3,5 +3,11 @@ export interface Pokemon {
     name: string;
     age: number;
     color: string;
+    type: PokemonType;
     isStrong: boolean;
+}
+
+export interface PokemonType {
+    key: number;
+    value: string;
 }
