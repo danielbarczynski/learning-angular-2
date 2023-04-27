@@ -5,6 +5,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PokemonPipe implements PipeTransform {
   transform(value: any): string {
-    return JSON.stringify(value, null, 2);
+    return JSON.stringify(value);
   }
 }

@@ -8,6 +8,6 @@ export interface Pokemon {
 }
 
 export interface PokemonType {
-    key: number;
+    key?: number;
     value: string;
 }

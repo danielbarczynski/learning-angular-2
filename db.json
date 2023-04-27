@@ -5,7 +5,7 @@
             "name": "Levi",
             "age": 3,
             "color": "white",
-            "type": { "key": 1, "value": "electric" },
+            "type": { "value": "electric" },
             "isStrong": false
         },
         {
@@ -13,7 +13,7 @@
             "name": "Zirus",
             "age": 5,
             "color": "black",
-            "type": { "key": 0, "value": "fire" },
+            "type": { "value": "fire" },
             "isStrong": true
         },
         {
@@ -21,7 +21,7 @@
             "name": "Yenny",
             "age": 4,
             "color": "brown",
-            "type": { "key": 2, "value": "air" },
+            "type": { "value": "air" },
             "isStrong": true
         }
     ],
