@@ -1,42 +1,64 @@
 {
-    "pokemons": [
-        {
-            "id": 1,
-            "name": "Levi",
-            "age": 3,
-            "color": "white",
-            "type": { "value": "electric" },
-            "isStrong": false
-        },
-        {
-            "id": 2,
-            "name": "Zirus",
-            "age": 5,
-            "color": "black",
-            "type": { "value": "fire" },
-            "isStrong": true
-        },
-        {
-            "id": 3,
-            "name": "Yenny",
-            "age": 4,
-            "color": "brown",
-            "type": { "value": "air" },
-            "isStrong": true
-        }
-    ],
-    "pokemonTypes": [
-        {
-            "key": 0,
-            "value": "fire"
-        },
-        {
-            "key": 1,
-            "value": "electric"
-        },
-        {
-            "key": 2,
-            "value": "air"
-        }
-    ]
+  "pokemons": [
+    {
+      "id": 1,
+      "name": "Levi",
+      "age": 3,
+      "color": "white",
+      "type": {
+        "value": "electric"
+      },
+      "isStrong": false
+    },
+    {
+      "id": 2,
+      "name": "Zirus",
+      "age": 5,
+      "color": "black",
+      "type": {
+        "value": "fire"
+      },
+      "isStrong": true
+    },
+    {
+      "id": 3,
+      "name": "Yenny",
+      "age": 4,
+      "color": "brown",
+      "type": {
+        "value": "air"
+      },
+      "isStrong": true
+    },
+    {
+      "id": 5,
+      "name": "Ozzo",
+      "age": 7,
+      "color": "blue",
+      "isStrong": true,
+      "type": "air"
+    },
+    {
+      "id": 6,
+      "name": "Miv",
+      "age": 6,
+      "color": "blue",
+      "isStrong": true,
+      "type": "electric"
+    }
+  ],
+  "pokemonTypes": [
+    {
+      "key": 0,
+      "value": "fire"
+    },
+    {
+      "key": 1,
+      "value": "electric"
+    },
+    {
+      "key": 2,
+      "value": "air"
+    }
+  ]
 }

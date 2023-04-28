@@ -1,6 +1,6 @@
-<form #form>
+<form #form="ngForm" (ngSubmit)="onSubmitHandle(form)">
   <label>Pokemon name:</label>
-  <input #pokemonName="ngModel" type="text" [(ngModel)]="pokemon.name" name="name">
+  <input #pokemonName="ngModel" type="text" [(ngModel)]="pokemon.name" name="pokemonName">
   <br> <br>
   <div>Is Strong?</div>
   <label>
@@ -23,6 +23,8 @@
       </option>
     </select>
   </label>
+  <br>
+  <button type="submit">Create</button>
 </form>
 
 <br>
