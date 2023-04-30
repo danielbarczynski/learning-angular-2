@@ -10,7 +10,11 @@
 <br>
 <app-pokemon-template-form></app-pokemon-template-form> -->
 <router-outlet></router-outlet>
-<a routerLink="">Home</a>
+<!-- <a routerLink="">Home</a>
 <br>
-<a routerLink="/about">About</a>
-
+<a routerLink="/about">About</a> -->
+<a *ngFor="let item of nav" 
+    [routerLink]="item.link"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: item.exact}"> 
+    {{ item.name }} </a>
