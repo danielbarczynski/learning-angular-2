@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChildren } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
@@ -7,7 +7,8 @@ import { PokemonService } from 'src/app/services/pokemon.service';
   templateUrl: './pokemon-list.component.html',
   styleUrls: ['./pokemon-list.component.css']
 })
-export class PokemonListComponent implements OnInit {
+export class PokemonListComponent implements OnInit, AfterViewInit {
+  @ViewChildren('pokemonRef') pokemonRef!: Element;
   pokemons!: Pokemon[];
   constructor(private pokemonService: PokemonService) {};
 
@@ -16,6 +17,10 @@ export class PokemonListComponent implements OnInit {
       this.pokemons = pokemons
     );
   };
+
+  ngAfterViewInit(): void {
+      console.log(this.pokemonRef);
+  }
 
   onRemoveHandler(pokemon: Pokemon) {
     return this.pokemons = this.pokemons.filter(x => x.id !== pokemon.id);
