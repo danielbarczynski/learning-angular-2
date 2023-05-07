@@ -7,7 +7,8 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: '**', component: NotfoundComponent}
+  { path: 'pokemons', loadChildren: () => import('./pokemon-base/pokemon-base.module').then(m => m.PokemonBaseModule)},
+  { path: '**', component: NotfoundComponent },
 ];
 
 @NgModule({

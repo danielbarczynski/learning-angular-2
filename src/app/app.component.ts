@@ -22,6 +22,11 @@ export class AppComponent {
       link: 'about',
       name: 'About',
       exact: true
+    },
+    {
+      link: 'pokemons',
+      name: 'Pokemons',
+      exact: true
     }
   ]
 }

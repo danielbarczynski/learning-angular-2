@@ -4,5 +4,6 @@
     <td>{{pokemon.age}}</td>
     <td>{{pokemon.color}}</td>
     <button (click)="onRemove(pokemon)">Del</button>
+    <button [routerLink]="[pokemon.id]">Details</button>
   </tr>
 </table>

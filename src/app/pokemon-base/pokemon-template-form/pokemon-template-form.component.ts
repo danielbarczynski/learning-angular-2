@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Pokemon, PokemonType } from '../models/pokemon';
-import { PokemonService } from '../services/pokemon.service';
+import { Pokemon, PokemonType } from '../../models/pokemon';
+import { PokemonService } from '../../services/pokemon.service';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-template-form',
@@ -12,11 +13,13 @@ export class PokemonTemplateFormComponent implements OnInit {
   pokemons: Pokemon[] = [];
   pokemonTypes!: PokemonType[];
 
-  constructor(private pokemonService: PokemonService) { }
+  constructor(private pokemonService: PokemonService, private router: Router, private activedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.pokemonService.getPokemon(1).subscribe((pokemon: Pokemon) => this.pokemon = pokemon);
-    this.pokemonService.getPokemonTypes().subscribe((pokemonTypes: PokemonType[]) => this.pokemonTypes = pokemonTypes);
+    this.activedRoute.params.subscribe((params: Params) => {
+      this.pokemonService.getPokemon(params['id']).subscribe((pokemon: Pokemon) => this.pokemon = pokemon);
+      this.pokemonService.getPokemonTypes().subscribe((pokemonTypes: PokemonType[]) => this.pokemonTypes = pokemonTypes);
+    })
   }
   
   toggleIsStrong(object: any): void{
