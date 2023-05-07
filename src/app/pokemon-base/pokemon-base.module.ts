@@ -5,7 +5,7 @@ import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.componen
 import { PokemonService } from '../services/pokemon.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import { PokemonTemplateFormComponent } from './pokemon-template-form/pokemon-template-form.component';
+import { PokemonTemplateFormComponent } from './pokemon-list/pokemon-template-form/pokemon-template-form.component';
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
